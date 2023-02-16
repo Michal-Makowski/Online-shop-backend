@@ -1,10 +1,5 @@
 package com.makowski.shop.web.product;
 
-import com.makowski.shop.entity.product.Product;
-import com.makowski.shop.service.product.ProductService;
-
-import jakarta.validation.Valid;
-
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -18,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.makowski.shop.entity.product.Product;
+import com.makowski.shop.service.product.ProductService;
+
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

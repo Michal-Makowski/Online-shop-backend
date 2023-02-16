@@ -1,7 +1,8 @@
 package com.makowski.shop.entity.product;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.makowski.shop.validation.ValidationConstans;
-import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -17,17 +18,14 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "product")
 public class Product {
     
@@ -46,7 +44,6 @@ public class Product {
     @Column(name = "description", nullable = false)
     private String description;
     
-    @NonNull
     @Min(value = 0, message = ValidationConstans.PRODUCT_PRICE_NOT_MIN)
     @NotNull(message = ValidationConstans.PRODUCT_PRICE_NOT_NULL)
     @Column(name = "price", nullable = false)

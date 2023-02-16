@@ -15,17 +15,13 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "product_rate")
 public class ProductRate {
     
@@ -33,6 +29,7 @@ public class ProductRate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    
     @NonNull
     @NotNull(message = ValidationConstans.PRODUCT_RATE_NOT_NULL)
     @Column(name = "rate", nullable = false, unique = true)

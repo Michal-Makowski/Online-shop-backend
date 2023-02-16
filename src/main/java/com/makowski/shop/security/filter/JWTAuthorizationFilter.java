@@ -1,0 +1,51 @@
+package com.makowski.shop.security.filter;
+
+import java.io.IOException;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.makowski.shop.entity.user.User;
+import com.makowski.shop.security.SecurityConstants;
+import com.makowski.shop.service.user.UserService;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
+
+
+
+@AllArgsConstructor
+public class JWTAuthorizationFilter extends OncePerRequestFilter {
+    
+    private UserService userService;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+
+        String header = request.getHeader(SecurityConstants.AUTHORIZATION);
+
+        if (header == null || !header.startsWith(SecurityConstants.BEARER)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        String token = header.replace(SecurityConstants.BEARER, "");
+        String user = JWT.require(Algorithm.HMAC512(SecurityConstants.SECRET_KEY))
+                .build()
+                .verify(token)
+                .getSubject();
+       
+        User AuthUser = userService.getUserByUsername(user);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(AuthUser.getUsername(), null, AuthUser.getAuthorities());
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        filterChain.doFilter(request, response);
+    }
+}
