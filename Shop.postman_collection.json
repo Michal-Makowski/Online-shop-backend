@@ -37,7 +37,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -68,7 +69,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -99,7 +101,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -130,7 +133,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/productCategory/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -152,7 +156,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/3",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -173,7 +178,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/productName/x",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/productName/x",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -195,7 +201,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/3",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -216,7 +223,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/3",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -237,7 +245,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -258,7 +267,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -288,7 +298,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/1/productCategory/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/1/productCategory/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -313,16 +324,6 @@
 						{
 							"name": "Create Product Category",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU3ODIwNn0.HBpu1UbwdEVPjeavwf0eX6TAjR1KCI4V5AvO_4Tk1ZiYbDFTEeUvj74t9AR5hN4VAJxpYh7wlIr83qnE0M988w",
-											"type": "string"
-										}
-									]
-								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -335,7 +336,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -365,7 +367,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -395,7 +398,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -425,7 +429,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -458,7 +463,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -491,7 +497,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -521,7 +528,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -551,7 +559,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productCategory/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productCategory/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -586,7 +595,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -616,7 +626,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/1/product/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/1/product/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -648,7 +659,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -678,7 +690,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -708,7 +721,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -738,7 +752,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -771,7 +786,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -804,7 +820,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/productByRateId/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/productByRateId/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -838,7 +855,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -868,7 +886,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -898,7 +917,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productRate/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productRate/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -933,7 +953,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/product/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -964,7 +985,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/product/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/product/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -995,7 +1017,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/product/3",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/product/3",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1026,7 +1049,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/product/4",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/product/4",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1048,7 +1072,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/14",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/14",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1069,7 +1094,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/product/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1090,7 +1116,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1111,7 +1138,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1141,7 +1169,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/productReview/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/productReview/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1176,7 +1205,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1207,7 +1237,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1238,7 +1269,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1269,7 +1301,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1303,7 +1336,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1336,7 +1370,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1369,7 +1404,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1400,7 +1436,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/3",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/3",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1430,7 +1467,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1470,7 +1508,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/registerUser",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/registerUser",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1500,7 +1539,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/registerAdmin",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/registerAdmin",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1530,7 +1570,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/registerUser",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/registerUser",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1560,7 +1601,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/login",
+									"raw": "https://online-shop-backend-production.up.railway.app/login",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1589,7 +1631,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/login",
+									"raw": "https://online-shop-backend-production.up.railway.app/login",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1618,7 +1661,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/login",
+									"raw": "https://online-shop-backend-production.up.railway.app/login",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1648,7 +1692,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1679,7 +1724,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/username/admin1",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/username/admin1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1701,7 +1747,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/all",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/all",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1732,7 +1779,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1772,7 +1820,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/user/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/user/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1817,7 +1866,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1861,7 +1911,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1904,7 +1955,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1945,7 +1997,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -1985,7 +2038,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2053,7 +2107,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2097,7 +2152,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2140,7 +2196,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2181,7 +2238,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2221,7 +2279,8 @@
 									}
 								},
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2247,7 +2306,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userCart/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2269,7 +2329,8 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userCart/user/1/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/1/product/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2293,7 +2354,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userCart/user/2/product/4",
+									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/2/product/4",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2317,7 +2379,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userCart/user/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2344,7 +2407,8 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2366,7 +2430,8 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1/product/1",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2390,7 +2455,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2/product/4",
+									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2/product/4",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2414,7 +2480,8 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2",
+									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2",
+									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
 										"up",
@@ -2441,14 +2508,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"protocol": "https",
 									"host": [
-										"online-shop-backend-production",
-										"up",
-										"railway",
-										"app"
+										"github",
+										"com"
 									],
 									"path": [
+										"Michal-Makowski",
+										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"1"
@@ -2463,14 +2531,15 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1/product/1",
+									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1/product/1",
+									"protocol": "https",
 									"host": [
-										"online-shop-backend-production",
-										"up",
-										"railway",
-										"app"
+										"github",
+										"com"
 									],
 									"path": [
+										"Michal-Makowski",
+										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"1",
@@ -2487,14 +2556,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/2/product/4",
+									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/2/product/4",
+									"protocol": "https",
 									"host": [
-										"online-shop-backend-production",
-										"up",
-										"railway",
-										"app"
+										"github",
+										"com"
 									],
 									"path": [
+										"Michal-Makowski",
+										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"2",
@@ -2511,14 +2581,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"protocol": "https",
 									"host": [
-										"online-shop-backend-production",
-										"up",
-										"railway",
-										"app"
+										"github",
+										"com"
 									],
 									"path": [
+										"Michal-Makowski",
+										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"1"
