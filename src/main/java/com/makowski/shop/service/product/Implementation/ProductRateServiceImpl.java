@@ -8,7 +8,7 @@ import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.product.ProductRate;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.product.ProductRateRepository;
-import com.makowski.shop.repository.product.ProductRepository;
+import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.product.ProductRateService;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import lombok.AllArgsConstructor;
 public class ProductRateServiceImpl implements ProductRateService{
     
     private ProductRateRepository productRateRepository;
-    private ProductRepository productRepository;
+    private ProductService productService;
 
     
     @Override
@@ -27,10 +27,8 @@ public class ProductRateServiceImpl implements ProductRateService{
 
     @Override
     public ProductRate addRateToProduct(Long id, Long productId){
-        ProductRate productRate = productRateRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductRate.class));
-        Product product = productRepository.findById(productId)
-            .orElseThrow(() -> new EntityNotFoundException(productId, Product.class));
+        ProductRate productRate = getProductRate(id);
+        Product product = productService.getProduct(productId);
         productRate.getProducts().add(product);
         return productRateRepository.save(productRate);
     }

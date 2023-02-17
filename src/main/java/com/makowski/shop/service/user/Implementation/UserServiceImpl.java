@@ -9,6 +9,9 @@ import com.makowski.shop.entity.user.Role;
 import com.makowski.shop.entity.user.User;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserRepository;
+import com.makowski.shop.service.user.UserCartService;
+import com.makowski.shop.service.user.UserFavoriteProductsService;
+import com.makowski.shop.service.user.UserLastProductsService;
 import com.makowski.shop.service.user.UserService;
 
 import lombok.AllArgsConstructor;
@@ -19,11 +22,18 @@ public class UserServiceImpl implements UserService{
     
     private UserRepository userRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private UserCartService userCartService;
+    private UserFavoriteProductsService userFavoriteProductsService;
+    private UserLastProductsService userLastProductsService;
 
     public User createUser (User user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRole(Role.USER);
-        return userRepository.save(user);
+        userRepository.save(user);
+        userCartService.createUserCart(user);
+        userFavoriteProductsService.createUserFavoriteProducts(user);
+        userLastProductsService.createUserLastProducts(user);
+        return user;
     }
 
     @Override

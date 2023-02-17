@@ -2,6 +2,9 @@ package com.makowski.shop.entity.product;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.makowski.shop.entity.user.UserCart;
+import com.makowski.shop.entity.user.UserFavoriteProducts;
+import com.makowski.shop.entity.user.UserLastProducts;
 import com.makowski.shop.validation.ValidationConstans;
 
 import jakarta.persistence.CascadeType;
@@ -67,4 +70,16 @@ public class Product {
     @JsonIgnore
     @ManyToMany(mappedBy = "products")
     private List<ProductRate> productRates;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "products")
+    private List<UserCart> userCarts;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "products")
+    private List<UserFavoriteProducts> userFavoriteProducts;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "products")
+    private List<UserLastProducts> userLastProducts;
 }
