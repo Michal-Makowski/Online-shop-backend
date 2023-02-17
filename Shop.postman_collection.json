@@ -1,0 +1,2541 @@
+{
+	"info": {
+		"_postman_id": "e3bd3140-262b-4ec7-b60c-6a808ab000e2",
+		"name": "Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25366186"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU3NDczN30.XATzJjdSeOyYbXyKiCuIKr9brG2aU3k6CUi82pOgXM36BB_8X97xlpshrr6PQdGHbETMrXWA0NYDOKdjYFrOoQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Washmachine\",\r\n    \"description\": \"sehr gute Washmachine\",\r\n    \"price\": 599.99,\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"productCategory",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Xbox Series X\",\r\n    \"description\": \"Sehr gute konsole\",\r\n    \"price\": 399.99,\r\n    \"quantity\": 50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"productCategory",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Samsung TV 80 zoll\",\r\n    \"description\": \"sehr grosse TV\",\r\n    \"price\": 1599.99,\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"productCategory",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"LG Heimkino 8.2\",\r\n    \"description\": \"Sehr gute heimkino\",\r\n    \"price\": 899.99,\r\n    \"quantity\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/productCategory/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"productCategory",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Name (or prefix/suffix/infix)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/productName/x",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"productName",
+										"x"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Product Category Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Product Category Id and Product Rate Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/3",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Product by Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Samsung Heimkino 10.2\",\r\n    \"description\": \"Bessere gute heimkino\",\r\n    \"price\": 1199.99,\r\n    \"quantity\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/1/productCategory/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"1",
+										"productCategory",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Category",
+					"item": [
+						{
+							"name": "Create Product Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU3ODIwNn0.HBpu1UbwdEVPjeavwf0eX6TAjR1KCI4V5AvO_4Tk1ZiYbDFTEeUvj74t9AR5hN4VAJxpYh7wlIr83qnE0M988w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"AGD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"TV\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"Konsole\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"Heim Kino\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product Category by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Product Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product Category by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Product Category by Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"Heim Kino und Audio\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productCategory/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productCategory",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Rate",
+					"item": [
+						{
+							"name": "Create Product Rate \"1\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 1.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product Rate to Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/1/product/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"1",
+										"product",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Rate \"2\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 2.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Rate \"3\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 3.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Rate \"4\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 4.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Rate \"5\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 5.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product Rate by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by ProductRate Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/productByRateId/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"productByRateId",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Product Rate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product Rate by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Product Rate by Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 4.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productRate/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productRate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Review",
+					"item": [
+						{
+							"name": "Create Product Review \"1\"",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Sehr guter TV - Top Preis Leistung\",\r\n    \"content\": \"Super Gerät im Preis-Leistungs-Verhältnis. Lediglich die App`s sind mir noch ein Rätsel. Disney+ installiert, wird bei Amazon auch als Kauf für 0€ angezeigt. Bei der Aktivierung wird man dann doch aufgefordert ein Abo zu \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/product/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Review Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Selbst ich habe die Einrichtung geschafft !\",\r\n    \"content\": \"SEs hat zwar ein bisschen gedauert aber der Fernseher funktioniert eigentlich intuitiv ( Fernbedienung) ähnlich wie der Fire TV Stick . \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/product/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"product",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Review Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \" Super Gerät, LAN Installation Fehlerhaft, WLAN OK.\",\r\n    \"content\": \"Super Gerät im Preis-Leistungs-Verhältnis. Lediglich die App`s sind mir noch ein Rätsel. Disney+ installiert, wird bei Amazoauch als Kauf für 0€ angezeigt. \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/product/3",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"product",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Review Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Eigentlich ....\",\r\n    \"content\": \"ein guter Fernseher zu diesem Preis - Bild und Tonqualität sind mit sehr gut zu bewerten in dieser Preisklasse, da kann man nicht meckern. Allerdings hat er auch ein paar Schwächen, die man berücksichtigen muss. \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/product/4",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"product",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product Review by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/14",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product Reviews by Product Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/product/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Product Reviews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product Review by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product Review Copy 2",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Toll\",\r\n    \"content\": \"Super\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/productReview/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productReview",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Review Comment",
+					"item": [
+						{
+							"name": "Create Review Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"Super Gerät im Preis-Leistungs-Verhältnis. Lediglich die App`s sind mir noch ein Rätsel. Disney+ installiert, wird bei Amazoauch als Kauf für 0€ angezeigt. \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"productReview",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Review Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"Einfach Geil\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"productReview",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Review Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"Ich Stimme zu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"productReview",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Review Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"Lediglich die App`s sind mir noch ein Rätsel. Disney+ installiert, wird bei Amazoauch als Kauf für 0€ angezeigt. \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"productReview",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Review Comment by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create all Review Comments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Review Comments by Product Review Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/productReview/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"productReview",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Review Comments by Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"Einfach Geil\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/3",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Review Comments by Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/ReviewComment/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"ReviewComment",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"m-makowski@hotmail.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/registerUser",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"registerUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Michal1\",\r\n    \"lastName\": \"Makowski1\",\r\n    \"email\": \"m-makowski1@hotmail.com\",\r\n    \"username\": \"admin1\",\r\n    \"password\": \"easyPassword1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/registerAdmin",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"registerAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Adrian\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"a-makowski@hotmail.com\",\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/registerUser",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"registerUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/login",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin1\",\r\n    \"password\": \"easyPassword1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/login",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/login",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User by Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODMwMX0.4KgZoVrbEyI6YEq4YtS8fH72e2JyV1pUh5AxT_s8h3I3_8Mmdscot4EfqA7LUmLXdRYv-x4LU4YCgqjUnJJ7fg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User by Username",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE2NzY1OTU3NDB9.vOigplfUZBrAPtrm5P6gr4ycE0jMsIAc4gslmWQDPdkpEVyDYXn8E0iT0rgQsZ-YIkJi9C0tte6kvjwZECWoYw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/username/admin1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"username",
+										"admin1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/all",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User by Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE2NzY1OTU3NDB9.vOigplfUZBrAPtrm5P6gr4ycE0jMsIAc4gslmWQDPdkpEVyDYXn8E0iT0rgQsZ-YIkJi9C0tte6kvjwZECWoYw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User by Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE2NzY1OTU3NDB9.vOigplfUZBrAPtrm5P6gr4ycE0jMsIAc4gslmWQDPdkpEVyDYXn8E0iT0rgQsZ-YIkJi9C0tte6kvjwZECWoYw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"m-makowski@hotmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/user/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Billing Address",
+					"item": [
+						{
+							"name": "Create Billing Address",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Kobelweg\",\r\n    \"houseNumber\": \"1\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userBillingAddress",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Billing Address by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userBillingAddress",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Billing Addresses by User Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userBillingAddress",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Billing Address by Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userBillingAddress",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Billing Address by Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Adrian\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Holzweg\",\r\n    \"houseNumber\": \"3\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userBillingAddress/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userBillingAddress",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer"
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "User Delivery Address",
+					"item": [
+						{
+							"name": "Create Delivery Address",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Kobelweg\",\r\n    \"houseNumber\": \"1\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userDeliveryAddress",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Delivery Address by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userDeliveryAddress",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Delivery Addresses by User Id Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userDeliveryAddress",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Delivery Address by Id Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userDeliveryAddress",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Delivery Address by Id Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NjU5ODY5M30.rwSeZ2F35fHvoyBf5265EWbzkSaERRH0OBcfFMiKYLPMEn9Ld7FHMoOBHdogr2KVYfF4qTG0-61clvsC6xD_pw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Adrian\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Holzweg\",\r\n    \"houseNumber\": \"3\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userDeliveryAddress/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userDeliveryAddress",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Cart",
+					"item": [
+						{
+							"name": "Get User Cart by UserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userCart/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userCart",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product to User Cart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userCart/user/1/product/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userCart",
+										"user",
+										"1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product from User Cart",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userCart/user/2/product/4",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userCart",
+										"user",
+										"2",
+										"product",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all Products from User Cart",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userCart/user/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userCart",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Favorite Products",
+					"item": [
+						{
+							"name": "Get User Favorite Products by UserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userFavoriteProducts",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product to User Favorite Products",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1/product/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userFavoriteProducts",
+										"user",
+										"1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product from User Favorite Products",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2/product/4",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userFavoriteProducts",
+										"user",
+										"2",
+										"product",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all Products from User Favorite Products",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userFavoriteProducts/user/2",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userFavoriteProducts",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Last Products Copy",
+					"item": [
+						{
+							"name": "Get User Last Products by UserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userLastProducts",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Product to User Last Products",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1/product/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userLastProducts",
+										"user",
+										"1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product from User Last Products",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/2/product/4",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userLastProducts",
+										"user",
+										"2",
+										"product",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all Products from User Last Products",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "online-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"host": [
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"userLastProducts",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:8080"
+		}
+	]
+}
