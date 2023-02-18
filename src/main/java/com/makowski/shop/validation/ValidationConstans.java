@@ -18,6 +18,4 @@ public class ValidationConstans {
     public static final String PRODUCT_QUANTITY_NOT_MIN = "Product quantity cannot be negative";
     public static final String CATEGORY_NAME_NOT_BLANK = "Product category name cannot be blank";
     public static final String PRODUCT_RATE_NOT_NULL = "Product rate name cannot be null";
-    
-
 }
