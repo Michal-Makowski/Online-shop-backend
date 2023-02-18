@@ -1500,7 +1500,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"m-makowski@hotmail.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"raw": "{\r\n    \"firstName\": \"Anna\",\r\n    \"lastName\": \"Mayer\",\r\n    \"email\": \"a-mayer456@hotmail.com\",\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1531,7 +1531,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Michal1\",\r\n    \"lastName\": \"Makowski1\",\r\n    \"email\": \"m-makowski1@hotmail.com\",\r\n    \"username\": \"admin1\",\r\n    \"password\": \"easyPassword1\"\r\n}",
+									"raw": "{\r\n    \"firstName\": \"Andreas\",\r\n    \"lastName\": \"Muller\",\r\n    \"email\": \"a-muller123@hotmail.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1562,7 +1562,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Adrian\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"a-makowski@hotmail.com\",\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"raw": "{\r\n    \"firstName\": \"Dominik\",\r\n    \"lastName\": \"Hoffman\",\r\n    \"email\": \"d-hoffman789@hotmail.com\",\r\n    \"username\": \"dhoffman\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1593,7 +1593,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1623,7 +1623,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"admin1\",\r\n    \"password\": \"easyPassword1\"\r\n}",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1653,7 +1653,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"easyPassword\"\r\n}",
+									"raw": "{\r\n    \"username\": \"dhoffman\",\r\n    \"password\": \"easyPassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1812,7 +1812,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"email\": \"m-makowski@hotmail.com\"\r\n}",
+									"raw": "{\r\n    \"firstName\": \"Anna\",\r\n    \"lastName\": \"Mayer\",\r\n    \"email\": \"a-mayer456@hotmail.com\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1858,7 +1858,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Kobelweg\",\r\n    \"houseNumber\": \"1\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"raw": "{\r\n     \"firstName\": \"Anna\",\r\n    \"lastName\": \"Mayer\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Kobelweg\",\r\n    \"houseNumber\": \"1\",\r\n    \"postcode\": \"86150\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1866,7 +1866,7 @@
 									}
 								},
 								"url": {
-									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userBillingAddress/user/3",
 									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
@@ -1877,7 +1877,7 @@
 									"path": [
 										"userBillingAddress",
 										"user",
-										"1"
+										"3"
 									]
 								}
 							},
@@ -2099,7 +2099,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"Michal\",\r\n    \"lastName\": \"Makowski\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Kobelweg\",\r\n    \"houseNumber\": \"1\",\r\n    \"postcode\": \"86150\"\r\n}",
+									"raw": "{\r\n     \"firstName\": \"Anna\",\r\n    \"lastName\": \"Mayer\",\r\n    \"city\": \"Augsburg\",\r\n    \"street\": \"Holzweg\",\r\n    \"houseNumber\": \"15\",\r\n    \"postcode\": \"86150\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2107,7 +2107,7 @@
 									}
 								},
 								"url": {
-									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userDeliveryAddress/user/3",
 									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
@@ -2118,7 +2118,7 @@
 									"path": [
 										"userDeliveryAddress",
 										"user",
-										"1"
+										"3"
 									]
 								}
 							},
@@ -2329,7 +2329,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/1/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userCart/user/5/product/3",
 									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
@@ -2340,9 +2340,9 @@
 									"path": [
 										"userCart",
 										"user",
-										"1",
+										"5",
 										"product",
-										"1"
+										"3"
 									]
 								}
 							},
@@ -2430,7 +2430,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/1/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userFavoriteProducts/user/3/product/4",
 									"protocol": "https",
 									"host": [
 										"online-shop-backend-production",
@@ -2441,9 +2441,9 @@
 									"path": [
 										"userFavoriteProducts",
 										"user",
-										"1",
+										"3",
 										"product",
-										"1"
+										"4"
 									]
 								}
 							},
@@ -2508,15 +2508,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userLastProducts/user/1",
 									"protocol": "https",
 									"host": [
-										"github",
-										"com"
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
 									],
 									"path": [
-										"Michal-Makowski",
-										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"1"
@@ -2531,18 +2531,18 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1/product/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userLastProducts/user/5/product/1",
 									"protocol": "https",
 									"host": [
-										"github",
-										"com"
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
 									],
 									"path": [
-										"Michal-Makowski",
-										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
-										"1",
+										"5",
 										"product",
 										"1"
 									]
@@ -2556,15 +2556,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/2/product/4",
+									"raw": "https://online-shop-backend-production.up.railway.app/userLastProducts/user/2/product/4",
 									"protocol": "https",
 									"host": [
-										"github",
-										"com"
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
 									],
 									"path": [
-										"Michal-Makowski",
-										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"2",
@@ -2581,15 +2581,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://github.com/Michal-Makowski/Online-shop-backendonline-shop-backend-production.up.railway.app/userLastProducts/user/1",
+									"raw": "https://online-shop-backend-production.up.railway.app/userLastProducts/user/1",
 									"protocol": "https",
 									"host": [
-										"github",
-										"com"
+										"online-shop-backend-production",
+										"up",
+										"railway",
+										"app"
 									],
 									"path": [
-										"Michal-Makowski",
-										"Online-shop-backendonline-shop-backend-production.up.railway.app",
 										"userLastProducts",
 										"user",
 										"1"
