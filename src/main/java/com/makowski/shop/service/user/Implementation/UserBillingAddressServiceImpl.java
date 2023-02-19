@@ -8,8 +8,8 @@ import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserBillingAddress;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserBillingAddressRepository;
-import com.makowski.shop.repository.user.UserRepository;
 import com.makowski.shop.service.user.UserBillingAddressService;
+import com.makowski.shop.service.user.UserService;
 
 import lombok.AllArgsConstructor;
 
@@ -18,12 +18,11 @@ import lombok.AllArgsConstructor;
 public class UserBillingAddressServiceImpl implements UserBillingAddressService{
     
     private UserBillingAddressRepository userBillingAddressRepository;
-    private UserRepository userRepository;
+    private UserService userService;
 
     @Override
     public UserBillingAddress createUserBillingAddress(UserBillingAddress userBillingAddress, Long userId) {
-        User user = userRepository.findById(userId)
-            .orElseThrow(() -> new EntityNotFoundException(userId, User.class));
+        User user = userService.getUserById(userId);
         userBillingAddress.setUser(user);
         return userBillingAddressRepository.save(userBillingAddress);
     }
@@ -47,8 +46,7 @@ public class UserBillingAddressServiceImpl implements UserBillingAddressService{
 
     @Override
     public UserBillingAddress updatUserBillingAddress(Long id, UserBillingAddress userBillingAddress) {
-        UserBillingAddress updateUserBillingAddress = userBillingAddressRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, UserBillingAddress.class));
+        UserBillingAddress updateUserBillingAddress = getUserBillingAddressById(id);
         updateUserBillingAddress.setFirstName(userBillingAddress.getFirstName());
         updateUserBillingAddress.setLastName(userBillingAddress.getLastName());
         updateUserBillingAddress.setCity(userBillingAddress.getCity());

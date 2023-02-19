@@ -26,6 +26,12 @@ public class ProductRateServiceImpl implements ProductRateService{
     }
 
     @Override
+    public ProductRate getProductRate(Long id){
+        return productRateRepository.findById(id)
+            .orElseThrow(() -> new EntityNotFoundException(id, ProductRate.class));
+    }
+
+    @Override
     public ProductRate addRateToProduct(Long id, Long productId){
         ProductRate productRate = getProductRate(id);
         Product product = productService.getProduct(productId);
@@ -33,16 +39,10 @@ public class ProductRateServiceImpl implements ProductRateService{
         return productRateRepository.save(productRate);
     }
 
-    @Override
-    public ProductRate getProductRate(Long id){
-        return productRateRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductRate.class));
-    }
-
+    
     @Override
     public List<Product> getProductByRateId(Long id){
-        ProductRate productRate = productRateRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductRate.class));
+        ProductRate productRate = getProductRate(id);
         return productRate.getProducts();
     }
 
@@ -59,8 +59,7 @@ public class ProductRateServiceImpl implements ProductRateService{
     
     @Override
     public ProductRate updateProductRate(Long id, ProductRate productRate){
-        ProductRate updateProductRate = productRateRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductRate.class));
+        ProductRate updateProductRate = getProductRate(id);
         updateProductRate.setRate(productRate.getRate());
         return productRateRepository.save(updateProductRate);
     }

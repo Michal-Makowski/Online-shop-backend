@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.product.ProductReview;
 import com.makowski.shop.exception.EntityNotFoundException;
-import com.makowski.shop.repository.product.ProductRepository;
 import com.makowski.shop.repository.product.ProductReviewRepository;
 import com.makowski.shop.service.product.ProductReviewService;
+import com.makowski.shop.service.product.ProductService;
 
 import lombok.AllArgsConstructor;
 
@@ -19,12 +19,11 @@ import lombok.AllArgsConstructor;
 public class ProductReviewServiceImpl implements ProductReviewService{
     
     private ProductReviewRepository productReviewRepository;
-    private ProductRepository productRepository;
+    private ProductService productService;
 
     @Override
     public ProductReview createProductReview(Long productId , ProductReview productReview){
-        Product product = productRepository.findById(productId)
-            .orElseThrow(() -> new EntityNotFoundException(productId, Product.class));
+        Product product = productService.getProduct(productId);
         productReview.setProduct(product);
         productReview.setDate(LocalDateTime.now());
         return productReviewRepository.save(productReview);
@@ -53,8 +52,7 @@ public class ProductReviewServiceImpl implements ProductReviewService{
 
     @Override
     public ProductReview updateProductReview(Long id, ProductReview productReview){
-        ProductReview updateProductReview = productReviewRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductReview.class));
+        ProductReview updateProductReview = getProductReview(id);
         updateProductReview.setTitle(productReview.getTitle());
         updateProductReview.setContent(productReview.getContent());
         updateProductReview.setDate(LocalDateTime.now());

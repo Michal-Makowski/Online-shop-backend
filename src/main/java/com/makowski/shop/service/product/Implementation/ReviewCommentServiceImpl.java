@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.ProductReview;
 import com.makowski.shop.entity.product.ReviewComment;
 import com.makowski.shop.exception.EntityNotFoundException;
-import com.makowski.shop.repository.product.ProductReviewRepository;
 import com.makowski.shop.repository.product.ReviewCommentRepository;
+import com.makowski.shop.service.product.ProductReviewService;
 import com.makowski.shop.service.product.ReviewCommentService;
 
 import lombok.AllArgsConstructor;
@@ -19,12 +19,11 @@ import lombok.AllArgsConstructor;
 public class ReviewCommentServiceImpl implements ReviewCommentService{
     
     private ReviewCommentRepository reviewCommentRepository;
-    private ProductReviewRepository productReviewRepository;
+    private ProductReviewService productReviewService;
 
     @Override
     public ReviewComment createReviewComment(Long productReviewId, ReviewComment reviewComment){
-        ProductReview productReview = productReviewRepository.findById(productReviewId)
-            .orElseThrow(() -> new EntityNotFoundException(productReviewId, ProductReview.class));
+        ProductReview productReview = productReviewService.getProductReview(productReviewId);
         reviewComment.setProductReview(productReview);
         reviewComment.setDate(LocalDateTime.now());
         return reviewCommentRepository.save(reviewComment);
@@ -53,8 +52,7 @@ public class ReviewCommentServiceImpl implements ReviewCommentService{
 
     @Override
     public ReviewComment updateReviewComment(Long id, ReviewComment reviewComment){
-        ReviewComment updateReviewComment = reviewCommentRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ReviewComment.class));
+        ReviewComment updateReviewComment = getReviewComment(id);
         updateReviewComment.setContent(reviewComment.getContent());
         updateReviewComment.setDate(LocalDateTime.now());
         return reviewCommentRepository.save(updateReviewComment);

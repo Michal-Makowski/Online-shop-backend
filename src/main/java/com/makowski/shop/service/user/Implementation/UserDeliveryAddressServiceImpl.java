@@ -8,21 +8,21 @@ import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserDeliveryAddress;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserDeliveryAddressRepository;
-import com.makowski.shop.repository.user.UserRepository;
 import com.makowski.shop.service.user.UserDeliveryAddressService;
+import com.makowski.shop.service.user.UserService;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @Service
 public class UserDeliveryAddressServiceImpl implements UserDeliveryAddressService{
+    
     private UserDeliveryAddressRepository userDeliveryAddressRepository;
-    private UserRepository userRepository;
+    private UserService userService;
 
     @Override
     public UserDeliveryAddress createUserDeliveryAddress(UserDeliveryAddress userDeliveryAddress, Long userId) {
-        User user = userRepository.findById(userId)
-            .orElseThrow(() -> new EntityNotFoundException(userId, User.class));
+        User user = userService.getUserById(userId);
         userDeliveryAddress.setUser(user);
         return userDeliveryAddressRepository.save(userDeliveryAddress);
     }
@@ -46,8 +46,7 @@ public class UserDeliveryAddressServiceImpl implements UserDeliveryAddressServic
 
     @Override
     public UserDeliveryAddress updatUserDeliveryAddress(Long id, UserDeliveryAddress userDeliveryAddress) {
-        UserDeliveryAddress updateUserDeliveryAddress = userDeliveryAddressRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, UserDeliveryAddress.class));
+        UserDeliveryAddress updateUserDeliveryAddress = getUserDeliveryAddressById(id);
         updateUserDeliveryAddress.setFirstName(userDeliveryAddress.getFirstName());
         updateUserDeliveryAddress.setLastName(userDeliveryAddress.getLastName());
         updateUserDeliveryAddress.setCity(userDeliveryAddress.getCity());

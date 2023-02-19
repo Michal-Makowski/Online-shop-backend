@@ -12,9 +12,10 @@ import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.user.UserLastProductsService;
 
 import lombok.AllArgsConstructor;
+
 @AllArgsConstructor
 @Service
-public class UserLastProductsServiceImpl implements UserLastProductsService{
+public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     private UserLastProductsRepository userLastProductsRepository;
     private ProductService productService;
@@ -36,9 +37,9 @@ public class UserLastProductsServiceImpl implements UserLastProductsService{
         Product product = productService.getProduct(productId);
         UserLastProducts userLastProducts = getLastProductsByUserId(userId);
         List<Product> products = userLastProducts.getProducts();
-        if(products.size() < 10){
+        if (products.size() < 10) {
             products.add(product);
-        }else{
+        } else {
             products.remove(0);
             products.add(product);
         }
@@ -59,5 +60,5 @@ public class UserLastProductsServiceImpl implements UserLastProductsService{
         userLastProducts.getProducts().clear();
         userLastProductsRepository.save(userLastProducts);
     }
-    
+
 }

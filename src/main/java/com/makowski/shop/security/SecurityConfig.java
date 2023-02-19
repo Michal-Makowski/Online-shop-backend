@@ -32,28 +32,23 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http
-                .headers().frameOptions().disable()// only for h2
-                .and()
+              //  .headers().frameOptions().disable()// only for h2
+              //  .and()
                 .csrf().disable()
                 
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                .requestMatchers(toH2Console()).permitAll() //only for h2
-                
+             //   .requestMatchers(toH2Console()).permitAll() //only for h2
                 .requestMatchers(HttpMethod.POST, "/user/registerCustomer").permitAll()
                 .requestMatchers(HttpMethod.POST, "/user/registerEmployee").permitAll()
                 .requestMatchers(HttpMethod.POST, "/user/registerAdmin").permitAll()
-                
-                
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)
                 .addFilter(new AuthenticationFilter(customAuthenticationManager))
                 .addFilterAfter(new JWTAuthorizationFilter(userService),
                 AuthenticationFilter.class)
-                 
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
         return http.build();
     }
 }
