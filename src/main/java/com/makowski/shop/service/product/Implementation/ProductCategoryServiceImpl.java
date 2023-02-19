@@ -35,8 +35,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
     }
 
     public ProductCategory updateProductCategory(Long id, ProductCategory productCategory){
-        ProductCategory updateProductCategory = productCategoryRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, ProductCategory.class));
+        ProductCategory updateProductCategory = getProductCategory(id);
         updateProductCategory.setCategoryName(productCategory.getCategoryName());
         return productCategoryRepository.save(updateProductCategory);
     }

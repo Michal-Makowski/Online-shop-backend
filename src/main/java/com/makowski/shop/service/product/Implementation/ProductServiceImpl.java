@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.product.ProductCategory;
 import com.makowski.shop.exception.EntityNotFoundException;
-import com.makowski.shop.repository.product.ProductCategoryRepository;
 import com.makowski.shop.repository.product.ProductRepository;
+import com.makowski.shop.service.product.ProductCategoryService;
 import com.makowski.shop.service.product.ProductService;
 
 import lombok.AllArgsConstructor;
@@ -18,12 +18,11 @@ import lombok.AllArgsConstructor;
 public class ProductServiceImpl implements ProductService{
     
     private ProductRepository productRepository;
-    private ProductCategoryRepository productCategoryRepository;
+    private ProductCategoryService productCategoryService;
 
     @Override
     public Product createProduct(Product product, Long productCategoryId){
-        ProductCategory productCategory = productCategoryRepository.findById(productCategoryId)
-            .orElseThrow(() -> new EntityNotFoundException(productCategoryId, ProductCategory.class));
+        ProductCategory productCategory = productCategoryService.getProductCategory(productCategoryId);
         product.setProductCategory(productCategory);
         return productRepository.save(product);
     }
@@ -61,10 +60,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product updateProduct(Long id, Long productCategoryId, Product product){
-        Product updateProduct =  productRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException(id, Product.class));
-        ProductCategory productCategory = productCategoryRepository.findById(productCategoryId)
-            .orElseThrow(() -> new EntityNotFoundException(productCategoryId, ProductCategory.class));
+        Product updateProduct =  getProduct(id);
+        ProductCategory productCategory = productCategoryService.getProductCategory(productCategoryId);
         updateProduct.setProductCategory(productCategory);        
         updateProduct.setName(product.getName());
         updateProduct.setDescription(product.getDescription());
