@@ -26,14 +26,21 @@ public class UserServiceImpl implements UserService{
     private UserFavoriteProductsService userFavoriteProductsService;
     private UserLastProductsService userLastProductsService;
 
-    public User createUser (User user){
+    public User createCustomer (User user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setRole(Role.USER);
+        user.setRole(Role.CUSTOMER);
         userRepository.save(user);
         userCartService.createUserCart(user);
         userFavoriteProductsService.createUserFavoriteProducts(user);
         userLastProductsService.createUserLastProducts(user);
         return user;
+    }
+
+    @Override
+    public User createEmployee(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setRole(Role.EMPLOYEE);
+        return userRepository.save(user);
     }
 
     @Override
@@ -75,6 +82,8 @@ public class UserServiceImpl implements UserService{
         updateUser.setEmail(user.getEmail());
         return userRepository.save(updateUser);
     }
+
+    
 
     
     //todo change password

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.makowski.shop.entity.user.User;
+import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserService;
 
 import jakarta.validation.Valid;
@@ -25,10 +27,16 @@ import lombok.AllArgsConstructor;
 public class UserController {
     
     UserService userService;
+    
+    @PostMapping("/registerCustomer")
+    public ResponseEntity<User> createCustomer(@Valid @RequestBody User user){
+        userService.createCustomer(user);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 
-    @PostMapping("/registerUser")
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user){
-        userService.createUser(user);
+    @PostMapping("/registerEmployee")
+    public ResponseEntity<User> createEmployee(@Valid @RequestBody User user){
+        userService.createEmployee(user);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
@@ -39,6 +47,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> getUserById(@PathVariable Long id){
         User user = userService.getUserById(id);
         user.setPassword("XXXXXX");
@@ -46,13 +55,15 @@ public class UserController {
     }
 
     @GetMapping("/username/{username}")
+    @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username){
         User user = userService.getUserByUsername(username);
         user.setPassword("XXXXXX");
         return  new ResponseEntity<User>(user, HttpStatus.OK);
     }
-
+    
     @GetMapping("/all")
+    @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers();
         users.forEach(user -> user.setPassword("XXXXXX"));
@@ -60,6 +71,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> deleteUser(@PathVariable Long id){
         userService.deleteUser(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

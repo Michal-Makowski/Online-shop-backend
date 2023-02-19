@@ -5,6 +5,7 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -20,6 +21,7 @@ import lombok.AllArgsConstructor;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity(prePostEnabled = true)
 @AllArgsConstructor
 public class SecurityConfig {
 
@@ -33,23 +35,23 @@ public class SecurityConfig {
                 .headers().frameOptions().disable()// only for h2
                 .and()
                 .csrf().disable()
-                /*
-                 * Disabled for test
-                 * .authorizeHttpRequests()
-                 * .requestMatchers(toH2Console()).permitAll() //only for h2
-                 * TODO Authority manager
-                 * 
-                 * .requestMatchers(HttpMethod.POST, "/user/registerUser").permitAll()
-                 * .requestMatchers(HttpMethod.POST, "/user/registerAdmin").permitAll()
-                 * .requestMatchers(HttpMethod.GET, "/user/all").hasAuthority("ADMIN")
-                 * .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                 * .anyRequest().authenticated()
-                 * .and()
-                 * .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)
-                 * .addFilter(new AuthenticationFilter(customAuthenticationManager))
-                 * .addFilterAfter(new JWTAuthorizationFilter(userService),
-                 * AuthenticationFilter.class)
-                 */
+                
+                .authorizeHttpRequests()
+                .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                .requestMatchers(toH2Console()).permitAll() //only for h2
+                
+                .requestMatchers(HttpMethod.POST, "/user/registerCustomer").permitAll()
+                .requestMatchers(HttpMethod.POST, "/user/registerEmployee").permitAll()
+                .requestMatchers(HttpMethod.POST, "/user/registerAdmin").permitAll()
+                
+                
+                .anyRequest().authenticated()
+                .and()
+                .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)
+                .addFilter(new AuthenticationFilter(customAuthenticationManager))
+                .addFilterAfter(new JWTAuthorizationFilter(userService),
+                AuthenticationFilter.class)
+                 
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         return http.build();

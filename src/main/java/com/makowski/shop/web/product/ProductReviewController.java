@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.makowski.shop.entity.product.ProductReview;
+import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.product.ProductReviewService;
 
 import jakarta.validation.Valid;
@@ -27,6 +29,7 @@ public class ProductReviewController {
     private ProductReviewService productReviewService;
 
     @PostMapping("/product/{productId}")
+    @PreAuthorize("hasRole('" + SecurityConstants.CUSTOMER +"')")
     public ResponseEntity<ProductReview> createProductReview(@PathVariable Long productId, @Valid @RequestBody ProductReview productReview){
         return new ResponseEntity<>(productReviewService.createProductReview(productId ,productReview), HttpStatus.CREATED);
     }
@@ -37,7 +40,7 @@ public class ProductReviewController {
     }
 
     @GetMapping("/product/{productId}")
-    public ResponseEntity<List<ProductReview>> findByProductId(@PathVariable Long productId){
+    public ResponseEntity<List<ProductReview>> getByProductId(@PathVariable Long productId){
         return new ResponseEntity<>(productReviewService.findByProductId(productId), HttpStatus.OK);
     }
 
@@ -47,12 +50,14 @@ public class ProductReviewController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<ProductReview> deleteProductReview(@PathVariable Long id){
         productReviewService.deleteProductReview(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<ProductReview> updateProductReview (@PathVariable Long id, @RequestBody ProductReview productReview){
         return new ResponseEntity<>(productReviewService.updateProductReview(id, productReview) , HttpStatus.OK);
     }
