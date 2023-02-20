@@ -50,7 +50,6 @@ public class Product {
     private String description;
     
     @DecimalMin(value = "0.0", message = ValidationConstans.NOT_MIN)
-    @Pattern(regexp = ValidationConstans.PATTERN_09, message = ValidationConstans.NO_MATCH_PATTERN_09)
     @Column(name = "price", nullable = false)
     private double price; 
     
