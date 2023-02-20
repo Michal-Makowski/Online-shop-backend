@@ -10,10 +10,9 @@ public class ValidationConstans {
     public static final String NO_MATCH_PATTERN_AZ = "cannot have special character or digits";
     public static final String NO_MATCH_PATTERN_USERNAME = "cannot have special character";
     public static final String NO_MATCH_PATTERN_AZ09 = "cannot have special character except ' - ' and ' ' '";
-    public static final String NO_MATCH_PATTERN_09 = "can contain only digits";
     
-    public static final String PATTERN_AZ = "^[a-zA-Z-']*$";
+    public static final String PATTERN_AZ = "^[a-zA-Z-'\s]*$";
     public static final String PATTERN_USERNAME = "^[a-zA-Z0-9]*$";
-    public static final String PATTERN_AZ09 = "^[a-zA-Z0-9-']*$";
-    public static final String PATTERN_09 = "^[0-9.]*$";
+    public static final String PATTERN_AZ09 = "^[a-zA-Z0-9-'\s]*$";
+    
 }
