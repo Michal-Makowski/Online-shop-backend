@@ -36,16 +36,12 @@ public class UserDeliveryAddressController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDeliveryAddress> getUserDeliveryAddressById(@PathVariable Long id){
-        UserDeliveryAddress userDeliveryAddress = userDeliveryAddressService.getUserDeliveryAddressById(id);
-        userDeliveryAddress.getUser().setPassword("XXXXXX");
-        return new ResponseEntity<>(userDeliveryAddress, HttpStatus.CREATED);
+        return new ResponseEntity<>(userDeliveryAddressService.getUserDeliveryAddressById(id), HttpStatus.CREATED);
     }
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<UserDeliveryAddress>> getAllUserDeliveryAddressByUserId(@PathVariable Long userId){
-        List<UserDeliveryAddress> userDeliveryAddresses = userDeliveryAddressService.getAllUserDeliveryAddressByUserId(userId);
-        userDeliveryAddresses.forEach(userDeliveryAddress -> userDeliveryAddress.getUser().setPassword("XXXXXX"));
-        return new ResponseEntity<>(userDeliveryAddresses, HttpStatus.OK);
+        return new ResponseEntity<>(userDeliveryAddressService.getAllUserDeliveryAddressByUserId(userId), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

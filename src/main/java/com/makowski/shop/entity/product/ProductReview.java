@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.makowski.shop.validation.ValidationConstans;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -16,6 +17,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -30,11 +32,14 @@ public class ProductReview {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @NonNull
+    @Size(min = 1, max = 254, message = ValidationConstans.NOT_SIZE)
     @Column(name = "title", nullable = false)
     private String title;
     
     @NonNull
+    @Size(min = 1, max = 254, message = ValidationConstans.NOT_SIZE)
     @Column(name = "content", nullable = false)
     private String content;
     

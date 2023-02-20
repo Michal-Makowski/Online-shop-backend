@@ -1,21 +1,19 @@
 package com.makowski.shop.validation;
 
-public class ValidationConstans {
-    public static final String FIRST_NAME_NOT_BLANK = "Last Name cannot be blank";
-    public static final String LAST_NAME_NOT_BLANK = "First Name cannot be blank";
-    public static final String USERNAME_NOT_BLANK = "Username cannot be blank";
-    public static final String EMAIL_NOT_VALID = "Please enter a valid email";
-    public static final String PASSWORD_NOT_BLANK = "Password cannot be blank";
-    public static final String CITY_NOT_BLANK = "City cannot be blank";
-    public static final String STREET_NOT_BLANK = "Street cannot be blank";
-    public static final String HOUSE_NUMBER_NOT_BLANK = "House number cannot be blank";
-    public static final String POSTCODE_NOT_BLANK = "Postcode cannot be blank";
-    public static final String PRODUCT_NAME_NOT_BLANK = "Product name cannot be blank";
-    public static final String PRODUCT_DESCRIPTION_NOT_BLANK = "Product description cannot be blank";
-    public static final String PRODUCT_PRICE_NOT_NULL = "Product price cannot be null";
-    public static final String PRODUCT_PRICE_NOT_MIN = "Product price cannot be negative";
-    public static final String PRODUCT_QUANTITY_NOT_NULL = "Product quantity cannot be null";
-    public static final String PRODUCT_QUANTITY_NOT_MIN = "Product quantity cannot be negative";
-    public static final String CATEGORY_NAME_NOT_BLANK = "Product category name cannot be blank";
-    public static final String PRODUCT_RATE_NOT_NULL = "Product rate name cannot be null";
+public class ValidationConstans { 
+    public static final String NOT_BLANK = "cannot be blank";
+    public static final String EMAIL_NOT_VALID = "is not valid. Please enter a valid email";
+    public static final String NOT_NULL = "cannot be null";
+    public static final String NOT_MIN = "cannot be negative";
+    public static final String NOT_SIZE = "'${validatedValue}' must be between {min} and {max} characters long";
+    
+    public static final String NO_MATCH_PATTERN_AZ = "cannot have special character or digits";
+    public static final String NO_MATCH_PATTERN_USERNAME = "cannot have special character";
+    public static final String NO_MATCH_PATTERN_AZ09 = "cannot have special character except ' - ' and ' ' '";
+    public static final String NO_MATCH_PATTERN_09 = "can contain only digits";
+    
+    public static final String PATTERN_AZ = "^[a-zA-Z-']*$";
+    public static final String PATTERN_USERNAME = "^[a-zA-Z0-9]*$";
+    public static final String PATTERN_AZ09 = "^[a-zA-Z0-9-']*$";
+    public static final String PATTERN_09 = "^[0-9.]*$";
 }

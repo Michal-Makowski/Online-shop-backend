@@ -12,7 +12,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -30,7 +31,8 @@ public class ProductCategory {
     private Long id;
 
     @NonNull
-    @NotBlank(message = ValidationConstans.CATEGORY_NAME_NOT_BLANK)
+    @Size(min = 2, max = 50, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ09, message = ValidationConstans.NO_MATCH_PATTERN_AZ09)
     @Column(name = "category_name", nullable = false, unique = true)
     private String categoryName;
 

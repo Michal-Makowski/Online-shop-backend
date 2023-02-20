@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserCart;
+import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserCartRepository;
 import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.user.UserCartService;
@@ -27,8 +28,10 @@ public class UserCartServiceImpl implements UserCartService{
 
     @Override
     public UserCart getCartByUserId(Long userId) {
-        return userCartRepository.findByUserId(userId);
+        return userCartRepository.findByUserId(userId)
+            .orElseThrow(() -> new EntityNotFoundException(userId, User.class, UserCart.class));
     }
+    
 
     @Override
     public UserCart addProductToUserCart(Long userId, Long productId) {

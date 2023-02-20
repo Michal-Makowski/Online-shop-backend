@@ -10,7 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -27,32 +28,38 @@ public class UserDeliveryAddress {
     private Long id;
 
     @NonNull
-    @NotBlank(message = ValidationConstans.FIRST_NAME_NOT_BLANK)
+    @Size(min = 2, max = 25, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ, message = ValidationConstans.NO_MATCH_PATTERN_AZ)
     @Column(name = "first_name", nullable = false)
     private String firstName;
     
     @NonNull
-    @NotBlank(message = ValidationConstans.LAST_NAME_NOT_BLANK)
+    @Size(min = 2, max = 25, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ, message = ValidationConstans.NO_MATCH_PATTERN_AZ)
     @Column(name = "last_name", nullable = false)
     private String lastName;
     
     @NonNull
-    @NotBlank(message = ValidationConstans.CITY_NOT_BLANK)
+    @Size(min = 2, max = 50, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ, message = ValidationConstans.NO_MATCH_PATTERN_AZ)
     @Column(name = "city", nullable = false)
     private String city;
     
     @NonNull
-    @NotBlank(message = ValidationConstans.STREET_NOT_BLANK)
+    @Size(min = 2, max = 25, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ09, message = ValidationConstans.NO_MATCH_PATTERN_AZ09)
     @Column(name = "street", nullable = false)
     private String street;
 
     @NonNull
-    @NotBlank(message = ValidationConstans.HOUSE_NUMBER_NOT_BLANK)
+    @Size(min = 1, max = 25, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ09, message = ValidationConstans.NO_MATCH_PATTERN_AZ09)
     @Column(name = "house_number", nullable = false)
     private String houseNumber;
 
     @NonNull
-    @NotBlank(message = ValidationConstans.POSTCODE_NOT_BLANK)
+    @Size(min = 1, max = 25, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ09, message = ValidationConstans.NO_MATCH_PATTERN_AZ09)
     @Column(name = "postcode", nullable = false)
     private String postcode;
 

@@ -18,13 +18,14 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-
 
 @Entity
 @Data
@@ -38,23 +39,24 @@ public class Product {
     private Long id;
 
     @NonNull
-    @NotBlank(message = ValidationConstans.PRODUCT_NAME_NOT_BLANK)
+    @Size(min = 2, max = 50, message = ValidationConstans.NOT_SIZE)
+    @Pattern(regexp = ValidationConstans.PATTERN_AZ09, message = ValidationConstans.NO_MATCH_PATTERN_AZ09)
     @Column(name = "name", nullable = false, unique = true)
     private String name;
     
     @NonNull
-    @NotBlank(message = ValidationConstans.PRODUCT_DESCRIPTION_NOT_BLANK)
+    @Size(min = 1, max = 254, message = ValidationConstans.NOT_SIZE)
     @Column(name = "description", nullable = false)
     private String description;
     
-    @Min(value = 0, message = ValidationConstans.PRODUCT_PRICE_NOT_MIN)
-    @NotNull(message = ValidationConstans.PRODUCT_PRICE_NOT_NULL)
+    @DecimalMin(value = "0.0", message = ValidationConstans.NOT_MIN)
+    @Pattern(regexp = ValidationConstans.PATTERN_09, message = ValidationConstans.NO_MATCH_PATTERN_09)
     @Column(name = "price", nullable = false)
-    private double price;
+    private double price; 
     
     @NonNull
-    @Min(value = 0, message = ValidationConstans.PRODUCT_QUANTITY_NOT_MIN)
-    @NotNull(message = ValidationConstans.PRODUCT_QUANTITY_NOT_NULL)
+    @Min(value = 0, message = ValidationConstans.NOT_MIN)   
+    @NotNull(message = ValidationConstans.NOT_NULL)
     @Column(name = "quantity", nullable = false)
     private Long quantity;
 

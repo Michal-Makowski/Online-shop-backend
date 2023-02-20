@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserLastProducts;
+import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserLastProductsRepository;
 import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.user.UserLastProductsService;
@@ -29,7 +30,8 @@ public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     @Override
     public UserLastProducts getLastProductsByUserId(Long userId) {
-        return userLastProductsRepository.findByUserId(userId);
+        return userLastProductsRepository.findByUserId(userId)
+        .orElseThrow(() -> new EntityNotFoundException(userId, User.class, UserLastProducts.class));
     }
 
     @Override

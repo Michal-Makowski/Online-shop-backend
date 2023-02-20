@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import com.makowski.shop.entity.product.Product;
 import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserFavoriteProducts;
+import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserFavoriteProductsRepository;
 import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.user.UserFavoriteProductsService;
@@ -25,7 +26,8 @@ public class UserFavoriteProductsServiceImpl implements UserFavoriteProductsServ
 
     @Override
     public UserFavoriteProducts getFavoriteProductsByUserId(Long userId) {
-        return userFavoriteProductsRepository.findByUserId(userId);
+        return userFavoriteProductsRepository.findByUserId(userId)
+            .orElseThrow(() -> new EntityNotFoundException(userId, User.class, UserFavoriteProducts.class));
     }
 
     @Override

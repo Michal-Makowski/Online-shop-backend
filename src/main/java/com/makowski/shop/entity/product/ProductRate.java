@@ -14,10 +14,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.DecimalMin;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 @Entity
 @Data
@@ -30,8 +29,7 @@ public class ProductRate {
     @Column(name = "id")
     private Long id;
     
-    @NonNull
-    @NotNull(message = ValidationConstans.PRODUCT_RATE_NOT_NULL)
+    @DecimalMin(value = "0.0", message = ValidationConstans.NOT_MIN)
     @Column(name = "rate", nullable = false, unique = true)
     private double rate;
 

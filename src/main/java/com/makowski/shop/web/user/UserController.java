@@ -49,25 +49,19 @@ public class UserController {
     @GetMapping("/{id}")
     @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> getUserById(@PathVariable Long id){
-        User user = userService.getUserById(id);
-        user.setPassword("XXXXXX");
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
     }
 
     @GetMapping("/username/{username}")
     @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username){
-        User user = userService.getUserByUsername(username);
-        user.setPassword("XXXXXX");
-        return  new ResponseEntity<User>(user, HttpStatus.OK);
+        return  new ResponseEntity<User>(userService.getUserByUsername(username), HttpStatus.OK);
     }
     
     @GetMapping("/all")
     @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<List<User>> getAllUsers() {
-        List<User> users = userService.getAllUsers();
-        users.forEach(user -> user.setPassword("XXXXXX"));
-        return new ResponseEntity<>(users, HttpStatus.OK);
+        return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
