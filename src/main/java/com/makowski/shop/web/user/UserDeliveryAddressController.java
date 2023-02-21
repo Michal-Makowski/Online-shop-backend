@@ -26,8 +26,8 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/userDeliveryAddress")
 public class UserDeliveryAddressController {
     
-    UserDeliveryAddressService userDeliveryAddressService;
-    //TODO dont send password back
+    private UserDeliveryAddressService userDeliveryAddressService;
+    
     @PostMapping("/user/{userId}")
     @PreAuthorize("hasRole('" + SecurityConstants.CUSTOMER +"')")
     public ResponseEntity<UserDeliveryAddress> createUserDeliveryAddress(@Valid @RequestBody UserDeliveryAddress userDeliveryAddress, @PathVariable Long userId){

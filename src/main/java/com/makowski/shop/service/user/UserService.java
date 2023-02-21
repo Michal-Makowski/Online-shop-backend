@@ -2,6 +2,7 @@ package com.makowski.shop.service.user;
 
 import java.util.List;
 
+import com.makowski.shop.dto.UserDto;
 import com.makowski.shop.entity.user.User;
 
 public interface UserService {
@@ -13,4 +14,5 @@ public interface UserService {
     List<User> getAllUsers();
     void deleteUser(Long id);
     User updateUser(Long id , User user);
+    User changePassword(String username, UserDto userDto);
 }

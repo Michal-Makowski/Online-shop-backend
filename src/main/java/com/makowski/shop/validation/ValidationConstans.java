@@ -13,6 +13,6 @@ public class ValidationConstans {
     
     public static final String PATTERN_AZ = "^[a-zA-Z-'\s]*$";
     public static final String PATTERN_USERNAME = "^[a-zA-Z0-9]*$";
-    public static final String PATTERN_AZ09 = "^[a-zA-Z0-9-'\s]*$";
+    public static final String PATTERN_AZ09 = "^[a-zA-Z0-9-'.\s]*$";
     
 }

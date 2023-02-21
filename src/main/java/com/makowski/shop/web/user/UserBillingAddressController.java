@@ -26,8 +26,8 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/userBillingAddress")
 public class UserBillingAddressController {
     
-    UserBillingAddressService userBillingAddressService;
-    //TODO dont send password back
+    private UserBillingAddressService userBillingAddressService;
+
     @PostMapping("/user/{userId}")
     @PreAuthorize("hasRole('" + SecurityConstants.CUSTOMER +"')")
     public ResponseEntity<UserBillingAddress> createUserBillingAddress(@Valid @RequestBody UserBillingAddress userBillingAddress, @PathVariable Long userId){
@@ -50,7 +50,7 @@ public class UserBillingAddressController {
         userBillingAddressService.deleteUserBillingArdress(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-    //TODO dont send user password back
+    
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('" + SecurityConstants.CUSTOMER +"')")
     public ResponseEntity<UserBillingAddress> updateUserBillingAddrres (@PathVariable Long id, @Valid @RequestBody UserBillingAddress userBillingAddress){

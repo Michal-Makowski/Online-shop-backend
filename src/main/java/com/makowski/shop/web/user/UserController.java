@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.makowski.shop.dto.UserDto;
 import com.makowski.shop.entity.user.User;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserService;
@@ -26,7 +27,7 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/user")
 public class UserController {
     
-    UserService userService;
+    private UserService userService;
     
     @PostMapping("/registerCustomer")
     public ResponseEntity<User> createCustomer(@Valid @RequestBody User user){
@@ -74,5 +75,11 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user){
         return new ResponseEntity<>(userService.updateUser(id, user), HttpStatus.OK);
+    }
+
+    @PutMapping("/username/{username}")
+    public ResponseEntity<UserDto> changePassword(@PathVariable String username, @RequestBody UserDto userDto){
+        userService.changePassword(username, userDto);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
