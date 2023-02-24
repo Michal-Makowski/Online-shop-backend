@@ -35,11 +35,13 @@ public class UserBillingAddressController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<UserBillingAddress> getUserBillingAddressById(@PathVariable Long id){
         return new ResponseEntity<>(userBillingAddressService.getUserBillingAddressById(id), HttpStatus.CREATED);
     }
 
     @GetMapping("/user/{userId}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<List<UserBillingAddress>> getAllUserBillingAddressByUserId(@PathVariable Long userId){
         return new ResponseEntity<>(userBillingAddressService.getAllUserBillingAddressByUserId(userId), HttpStatus.OK);
     }

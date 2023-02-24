@@ -35,11 +35,13 @@ public class UserDeliveryAddressController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<UserDeliveryAddress> getUserDeliveryAddressById(@PathVariable Long id){
         return new ResponseEntity<>(userDeliveryAddressService.getUserDeliveryAddressById(id), HttpStatus.CREATED);
     }
 
     @GetMapping("/user/{userId}")
+    @PreAuthorize("hasAnyRole('" + SecurityConstants.CUSTOMER +"', '" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<List<UserDeliveryAddress>> getAllUserDeliveryAddressByUserId(@PathVariable Long userId){
         return new ResponseEntity<>(userDeliveryAddressService.getAllUserDeliveryAddressByUserId(userId), HttpStatus.OK);
     }
@@ -50,7 +52,7 @@ public class UserDeliveryAddressController {
         userDeliveryAddressService.deleteUserDeliveryArdress(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-    //TODO dont send user password back
+    
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('" + SecurityConstants.CUSTOMER +"')")
     public ResponseEntity<UserDeliveryAddress> updateUserDeliveryAddrres (@PathVariable Long id, @Valid @RequestBody UserDeliveryAddress userDeliveryAddress){

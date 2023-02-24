@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import com.makowski.shop.entity.product.ProductReview;
+import com.makowski.shop.entity.product.ReviewComment;
 import com.makowski.shop.validation.Password;
 import com.makowski.shop.validation.ValidationConstans;
 
@@ -94,6 +96,14 @@ public class User implements UserDetails {
     @JsonIgnore
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private UserLastProducts userLastProduct;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<ProductReview> productReviews;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<ReviewComment> reviewComments;
 
     @Enumerated(EnumType.STRING)
     private Role role;

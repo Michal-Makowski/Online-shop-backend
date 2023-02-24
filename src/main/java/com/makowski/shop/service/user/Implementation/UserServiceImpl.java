@@ -11,6 +11,7 @@ import com.makowski.shop.entity.user.User;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.exception.PasswordNotMatchException;
 import com.makowski.shop.repository.user.UserRepository;
+import com.makowski.shop.security.MySecurityContextHolder;
 import com.makowski.shop.service.user.UserCartService;
 import com.makowski.shop.service.user.UserFavoriteProductsService;
 import com.makowski.shop.service.user.UserLastProductsService;
@@ -27,6 +28,7 @@ public class UserServiceImpl implements UserService {
     private UserCartService userCartService;
     private UserFavoriteProductsService userFavoriteProductsService;
     private UserLastProductsService userLastProductsService;
+    private MySecurityContextHolder mySecurityContextHolder;
 
     public User createCustomer(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
@@ -71,12 +73,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUser(Long id) {
+        mySecurityContextHolder.userIsValid(id);
         userRepository.deleteById(id);
     }
     // update w/o userName and password
 
     @Override
     public User updateUser(Long id, User user) {
+        mySecurityContextHolder.userIsValid(id);
         User updateUser = getUserById(id);
         updateUser.setFirstName(user.getFirstName());
         updateUser.setLastName(user.getLastName());
@@ -86,6 +90,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User changePassword(String username, UserDto userDto) {
+        mySecurityContextHolder.userIsValid(username);
         User user = getUserByUsername(username);
         if (userDto.getNewPassword().equals(userDto.getRepeatNewPassword())) {
             if (bCryptPasswordEncoder.matches(userDto.getOldPassword(), user.getPassword())) {

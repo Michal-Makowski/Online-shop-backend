@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.makowski.shop.entity.user.User;
 import com.makowski.shop.validation.ValidationConstans;
 
 import jakarta.persistence.CascadeType;
@@ -57,4 +58,7 @@ public class ProductReview {
     @OneToMany(mappedBy = "productReview", cascade = CascadeType.ALL)
     private List<ReviewComment> reviewComments;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 }

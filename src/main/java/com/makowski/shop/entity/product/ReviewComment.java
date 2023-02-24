@@ -2,6 +2,7 @@ package com.makowski.shop.entity.product;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.makowski.shop.entity.user.User;
 import com.makowski.shop.validation.ValidationConstans;
 
 import jakarta.persistence.Column;
@@ -40,4 +41,8 @@ public class ReviewComment {
     @ManyToOne(optional = false)
     @JoinColumn(name = "product_review_id", referencedColumnName = "id")
     private ProductReview productReview;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 }

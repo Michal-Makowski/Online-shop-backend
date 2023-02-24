@@ -9,6 +9,7 @@ import com.makowski.shop.entity.user.User;
 import com.makowski.shop.entity.user.UserLastProducts;
 import com.makowski.shop.exception.EntityNotFoundException;
 import com.makowski.shop.repository.user.UserLastProductsRepository;
+import com.makowski.shop.security.MySecurityContextHolder;
 import com.makowski.shop.service.product.ProductService;
 import com.makowski.shop.service.user.UserLastProductsService;
 
@@ -20,6 +21,7 @@ public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     private UserLastProductsRepository userLastProductsRepository;
     private ProductService productService;
+    private MySecurityContextHolder mySecurityContextHolder;
 
     @Override
     public UserLastProducts createUserLastProducts(User user) {
@@ -30,12 +32,14 @@ public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     @Override
     public UserLastProducts getLastProductsByUserId(Long userId) {
+        mySecurityContextHolder.userIsValid(userId);
         return userLastProductsRepository.findByUserId(userId)
-        .orElseThrow(() -> new EntityNotFoundException(userId, User.class, UserLastProducts.class));
+                .orElseThrow(() -> new EntityNotFoundException(userId, User.class, UserLastProducts.class));
     }
 
     @Override
     public UserLastProducts addProductToUserLastProducts(Long userId, Long productId) {
+        mySecurityContextHolder.userIsValid(userId);
         Product product = productService.getProduct(productId);
         UserLastProducts userLastProducts = getLastProductsByUserId(userId);
         List<Product> products = userLastProducts.getProducts();
@@ -50,6 +54,7 @@ public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     @Override
     public void deleteProductFromUserLastProducts(Long userId, Long productId) {
+        mySecurityContextHolder.userIsValid(userId);
         UserLastProducts userLastProducts = getLastProductsByUserId(userId);
         Product product = productService.getProduct(productId);
         userLastProducts.getProducts().remove(product);
@@ -58,6 +63,7 @@ public class UserLastProductsServiceImpl implements UserLastProductsService {
 
     @Override
     public void deleteAllProductFromUserLastProducts(Long userId) {
+        mySecurityContextHolder.userIsValid(userId);
         UserLastProducts userLastProducts = getLastProductsByUserId(userId);
         userLastProducts.getProducts().clear();
         userLastProductsRepository.save(userLastProducts);
