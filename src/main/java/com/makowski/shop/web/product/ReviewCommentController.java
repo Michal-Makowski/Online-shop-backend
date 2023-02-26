@@ -18,9 +18,11 @@ import com.makowski.shop.entity.product.ReviewComment;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.product.ReviewCommentService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "2.5 Review Comment")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/ReviewComment")

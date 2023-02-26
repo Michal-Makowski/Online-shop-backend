@@ -37,12 +37,12 @@ public class SecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                .requestMatchers("/swagger-ui/**","/v3/**").permitAll()
                 .requestMatchers(HttpMethod.GET,"/user/verificationToken/**").permitAll()
             //    .requestMatchers(toH2Console()).permitAll() //only for h2
                 .requestMatchers(HttpMethod.POST, "/user/registerCustomer").permitAll()
                 .requestMatchers(HttpMethod.POST, "/user/registerEmployee").permitAll()
                 .requestMatchers(HttpMethod.POST, "/user/registerAdmin").permitAll()
-                
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)

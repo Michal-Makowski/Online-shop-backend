@@ -18,9 +18,11 @@ import com.makowski.shop.entity.user.UserBillingAddress;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserBillingAddressService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "1.3 User Billing Address")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/userBillingAddress")

@@ -19,9 +19,11 @@ import com.makowski.shop.entity.product.ProductRate;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.product.ProductRateService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "2.3 Product Rate")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/productRate")

@@ -14,8 +14,10 @@ import com.makowski.shop.entity.user.UserLastProducts;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserLastProductsService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "1.6 User Last Products")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/userLastProducts")

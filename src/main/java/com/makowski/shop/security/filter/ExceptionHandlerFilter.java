@@ -23,7 +23,7 @@ public class ExceptionHandlerFilter extends OncePerRequestFilter{
             response.getWriter().write("Username doesn't exist");
             response.getWriter().flush();
         } catch (JWTVerificationException e) {
-            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.getWriter().write("Java Web Token is not valid");
             response.getWriter().flush();
         } catch (RuntimeException e) {

@@ -16,6 +16,7 @@ import com.makowski.shop.entity.product.ReviewComment;
 import com.makowski.shop.validation.Password;
 import com.makowski.shop.validation.ValidationConstans;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,6 +42,7 @@ import lombok.NonNull;
 @Table(name = "users")
 public class User implements UserDetails {
     
+    @Schema(hidden = true)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -77,6 +79,7 @@ public class User implements UserDetails {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Schema(hidden = true)
     private boolean enabled = true;
 
     @JsonIgnore
@@ -107,29 +110,35 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<ReviewComment> reviewComments;
 
+    @Schema(hidden = true)
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Schema(hidden = true)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
     }
 
+    @Schema(hidden = true)
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    @Schema(hidden = true)
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    @Schema(hidden = true)
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    @Schema(hidden = true)
     @Override
     public boolean isEnabled() {
         return enabled;

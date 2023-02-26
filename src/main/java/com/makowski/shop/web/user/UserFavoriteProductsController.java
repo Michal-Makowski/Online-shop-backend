@@ -14,8 +14,10 @@ import com.makowski.shop.entity.user.UserFavoriteProducts;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserFavoriteProductsService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "1.5 User Favorite Products")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/userFavoriteProducts")

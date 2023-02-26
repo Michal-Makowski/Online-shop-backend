@@ -14,8 +14,10 @@ import com.makowski.shop.entity.user.UserCart;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserCartService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "1.4 User Cart")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/userCart")

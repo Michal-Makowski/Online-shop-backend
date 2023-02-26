@@ -18,9 +18,11 @@ import com.makowski.shop.entity.user.UserDeliveryAddress;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.user.UserDeliveryAddressService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "1.2 User Delivery Address")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/userDeliveryAddress")

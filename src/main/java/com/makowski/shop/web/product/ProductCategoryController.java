@@ -18,9 +18,11 @@ import com.makowski.shop.entity.product.ProductCategory;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.product.ProductCategoryService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "2.2 Product Category")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/productCategory")

@@ -18,9 +18,11 @@ import com.makowski.shop.entity.product.ProductReview;
 import com.makowski.shop.security.SecurityConstants;
 import com.makowski.shop.service.product.ProductReviewService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "2.4 Product Review")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/productReview")
