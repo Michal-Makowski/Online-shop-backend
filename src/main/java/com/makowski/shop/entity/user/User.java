@@ -77,6 +77,8 @@ public class User implements UserDetails {
     @Column(name = "password", nullable = false)
     private String password;
 
+    private boolean enabled = true;
+
     @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<UserBillingAddress> userBillingAddresses;
@@ -130,7 +132,7 @@ public class User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return enabled;
     }
 
     

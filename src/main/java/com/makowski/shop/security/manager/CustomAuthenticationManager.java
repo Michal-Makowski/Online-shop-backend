@@ -2,6 +2,7 @@ package com.makowski.shop.security.manager;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -23,6 +24,7 @@ public class CustomAuthenticationManager implements AuthenticationManager{
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         User user = userService.getUserByUsername(authentication.getName()); //getName have username
+        if(!user.isEnabled()) throw new DisabledException("Please confirm your e-mail");
         if (!bCryptPasswordEncoder.matches(authentication.getCredentials().toString(), user.getPassword())){
             throw new BadCredentialsException("Wrong password");
         }

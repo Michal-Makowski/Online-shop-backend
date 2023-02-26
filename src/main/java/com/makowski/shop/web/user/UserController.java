@@ -47,6 +47,12 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping("/verificationToken/{token}")
+    public ResponseEntity<String> confirmUser(@PathVariable String token){
+        userService.confirmUser(token);
+        return new ResponseEntity<>("Confirmed", HttpStatus.OK);
+    }
+
     @GetMapping("/{id}")
     @PreAuthorize("hasRole('" + SecurityConstants.ADMIN +"')")
     public ResponseEntity<User> getUserById(@PathVariable Long id){

@@ -16,6 +16,7 @@ import com.makowski.shop.service.user.UserCartService;
 import com.makowski.shop.service.user.UserFavoriteProductsService;
 import com.makowski.shop.service.user.UserLastProductsService;
 import com.makowski.shop.service.user.UserService;
+import com.makowski.shop.service.user.VerificationTokenService;
 
 import lombok.AllArgsConstructor;
 
@@ -29,6 +30,7 @@ public class UserServiceImpl implements UserService {
     private UserFavoriteProductsService userFavoriteProductsService;
     private UserLastProductsService userLastProductsService;
     private MySecurityContextHolder mySecurityContextHolder;
+    private VerificationTokenService verificationTokenService;
 
     public User createCustomer(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
@@ -44,6 +46,17 @@ public class UserServiceImpl implements UserService {
     public User createEmployee(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRole(Role.EMPLOYEE);
+        user.setEnabled(false);
+        userRepository.save(user);
+        verificationTokenService.createVerificationToken(user);
+        return user;
+    }
+
+    @Override
+    public User confirmUser(String token) {
+        Long userId = verificationTokenService.checkVerificationToken(token);
+        User user = getUserById(userId);
+        user.setEnabled(true);
         return userRepository.save(user);
     }
 
@@ -58,7 +71,7 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(id, User.class));
-    }
+    } 
 
     @Override
     public User getUserByUsername(String username) {
